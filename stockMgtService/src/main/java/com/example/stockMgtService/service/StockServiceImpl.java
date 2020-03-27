@@ -10,9 +10,14 @@ import com.example.stockMgtService.model.Product;
 public class StockServiceImpl implements StockService {
 
 	@Autowired
-    StockRepository stockRepository;	
+    	StockRepository stockRepository;	
 	public Product save (Product product) {
 		return stockRepository.save(product);
 		
+	}
+	
+	@Override
+	public List<Product> findAll() {
+		return stockRepository.findAll();
 	}
 }
